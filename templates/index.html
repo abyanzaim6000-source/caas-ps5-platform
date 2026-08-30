@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CaaS - PS5 Rental</title>
+    <style>
+        body { font-family: sans-serif; max-width: 500px; margin: 50px auto; padding: 20px; }
+        input, button { padding: 10px; margin: 5px 0; width: 100%; box-sizing: border-box; }
+        button { background: #1e88e5; color: white; border: none; cursor: pointer; }
+        #status { margin-top: 20px; padding: 10px; background: #f0f0f0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>PS5 Console Rental</h1>
+
+    <h3>Step 1: Book a Session</h3>
+    <input id="userId" placeholder="Your phone or email" />
+    <input id="minutes" type="number" placeholder="Minutes to book" value="30" />
+    <button onclick="bookSession()">Book Now</button>
+
+    <h3>Step 2: Enter OTP</h3>
+    <input id="otpInput" placeholder="Enter OTP" />
+    <button onclick="verifySession()">Verify & Start</button>
+
+    <div id="status">Status: waiting...</div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
