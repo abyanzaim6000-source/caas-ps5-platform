@@ -2,6 +2,7 @@ import sqlite3
 import time
 from datetime import datetime
 from booking import release_console
+from sunshine_client import kick_user_and_rest_console
 
 def check_and_cutoff():
     """Checks if the current session has expired, and if so, ends it."""
@@ -17,6 +18,7 @@ def check_and_cutoff():
             # In the real system, this is where we'd also call Sunshine
             # to kill the stream and rest the console — we'll add that
             # once we build sunshine_client.py
+            kick_user_and_rest_console(user_id)
             release_console()
             return True
     return False
